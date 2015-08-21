@@ -1,27 +1,15 @@
-'use strict';
 
-angular.module('Stundenzettel.controllers')
-  .controller('StundenzettelCtrl', [
-  		'$scope',
-  		'$timeout',
-  		'Pdf',
-  		'Report',
-  		function($scope, $timeout, Pdf, Report) {
 
-			$scope.model = {
-				base64endcodedpdf: ""
-			};
+base64gular.controller('Base64gularCtrl', ['PdfService', function(PdfService) {
+    'use strict';
 
-			// callback for ng-click 'convertPdf':
-			$scope.convertPdf = function() {
+    var ctrl = this;
+    ctrl.pdf = {
+        base64endcodedPdf: "here the base 64 encoded pdf should be"
+        };
+    ctrl.decodedPdf = [];
 
-				// Get the Tickets from /zettel/jira/
-				$scope.tickets = Pdf.query( {usr: $scope.model.jirauser, pw: $scope.model.jirapassword} );
-
-				// Because of the asynchronous nature of the $resource/REST-call, we need to register us to a callback
-				// by using the promise the query returns - only then, we are not loading any more :)
-				$scope.tickets.$promise.then(function() {
-					// get pdf back
-				})
-			};
-		}]);
+    ctrl.convertPdf = function() {
+        ctrl.decodedPdf = PdfService.convertPdf(ctrl.pdf);
+    };
+}]);

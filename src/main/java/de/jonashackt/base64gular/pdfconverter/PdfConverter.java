@@ -16,7 +16,7 @@ public class PdfConverter {
     @RequestMapping(value="/converter", method=RequestMethod.POST)
     public ResponseEntity<byte[]> convertPdf(@RequestBody Pdf pdf) {
         System.out.println("Called converter");
-        byte[] decodedPdf = Base64.getDecoder().decode(pdf.getBase64Encoded());
+        byte[] decodedPdf = Base64.getDecoder().decode(pdf.getBase64endcodedPdf());
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.parseMediaType("application/pdf"));

@@ -18,3 +18,5 @@ target
 # Intellij #
 .idea
 *.iml
+*.ipr
+*.iws
