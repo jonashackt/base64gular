@@ -5,7 +5,7 @@ base64gular.controller('Base64gularCtrl', ['PdfService', function(PdfService) {
 
     var ctrl = this;
     ctrl.pdf = {
-        base64endcodedPdf: "here the base 64 encoded pdf should be"
+        base64endcodedPdf: ""
         };
     ctrl.decodedPdf = [];
 
