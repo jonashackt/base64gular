@@ -8,15 +8,14 @@
     <div class="container" ng-controller="Base64gularCtrl as ctrl" style="width: 60%;">
       
       <div class="page-header">
-        <h1><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Base64gular 0.0.1 <small> Convert your Base64-encoded PDF faster...</small></h1>
+        <h1><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Base64gular 0.0.2 <small> Convert your Base64-encoded PDF faster...</small></h1>
       </div>
 
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
-            <label for="inputUser">Copy-Paste your Base64-String here:</label>
-            <input type="text" class="form-control" id="inputUser" placeholder="Enter Base64-encoded-PDF here..." ng-model="ctrl.pdf.base64endcodedPdf">
+            <textarea rows="23" class="form-control" id="inputUser" placeholder="Enter Base64-encoded-PDF here..." ng-model="ctrl.pdf.base64endcodedPdf"></textarea>
           </div>
 
           <button class="btn btn-primary" type="submit" title="Convert to PDF" ng-click="ctrl.convertPdf()">
