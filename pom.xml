@@ -5,7 +5,7 @@
 
 	<groupId>de.jonashackt.base64gular</groupId>
 	<artifactId>base64gular</artifactId>
-	<version>1.0.9</version>
+	<version>1.0.10</version>
 	<packaging>jar</packaging>
 
 	<name>base64gular</name>
@@ -14,7 +14,6 @@
 	<scm>
 		<connection>scm:git:https://github.com/jonashackt/base64gular.git</connection>
 		<developerConnection>scm:git:https://github.com/jonashackt/base64gular.git</developerConnection>
-		<!-- <developerConnection>scm:git:file://localhost/${basedir}</developerConnection> -->
 	</scm>
 
 	<distributionManagement>
