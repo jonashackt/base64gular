@@ -13,7 +13,7 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/jonashackt/base64gular.git</connection>
-		<developerConnection>scm:git:git://localhost/${basedir}</developerConnection>
+		<developerConnection>scm:git:file://localhost/${basedir}</developerConnection>
 	</scm>
 
 	<distributionManagement>
