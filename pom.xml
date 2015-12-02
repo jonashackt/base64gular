@@ -5,11 +5,23 @@
 
 	<groupId>de.jonashackt.base64gular</groupId>
 	<artifactId>base64gular</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>1.0.6</version>
 	<packaging>jar</packaging>
 
 	<name>base64gular</name>
 	<description>Simple Angular Spring Boot App for Decoding Base64-Encoded Strings with ISO_8859_1-Charset</description>
+
+	<scm>
+		<connection>scm:git:https://github.com/jonashackt/base64gular.git</connection>
+		<developerConnection>scm:git:git://localhost/${basedir}</developerConnection>
+	</scm>
+
+	<distributionManagement>
+	 <repository>
+	    <id>nexus-releases</id>
+	    <url>http://192.168.99.100:8081/content/repositories/base64gular-releases</url>
+	 </repository>
+	</distributionManagement>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -49,6 +61,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+		    <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-scm-plugin</artifactId>
+		        <version>1.9.4</version>
+		        <configuration>
+		          <tag>${project.version}</tag>
+		        </configuration>
+		    </plugin>
 		</plugins>
 	</build>
 	
